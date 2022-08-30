@@ -29,6 +29,8 @@ componentDidMount() {
 }
 
   render() {
+    console.log('^^^^^^^This is books',this.state.books);
+
 // let books = this.state.books.map(book => (
 //   <p key={book._id}>{book.name} is a </p>
 // ))
@@ -44,6 +46,11 @@ componentDidMount() {
         />
         <Carousel.Caption>
           <h3 style={{ backgroundColor: 'teal', borderRadius: '5px', width: 'max-content', margin: 'auto', padding: '5px' }}> </h3>
+          alt={'Bill murray'}
+          <p>{value.title}</p>
+          <p>{value.description}</p>
+          <p>Available:{value.status}</p>
+          
         </Carousel.Caption>
       </Carousel.Item>
     ))

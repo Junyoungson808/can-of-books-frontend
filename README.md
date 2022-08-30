@@ -22,7 +22,9 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-## Collaborator(s):
+
+## Collaborator(s)
 
 Brandon Pitts - Collaborator
+
 Junyoung Son - Owner
