@@ -4,11 +4,7 @@ import Footer from './Footer';
 import BestBooks from './BestBooks';
 import About from './About.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 
 class App extends React.Component {
