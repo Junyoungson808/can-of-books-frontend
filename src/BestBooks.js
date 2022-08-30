@@ -29,22 +29,26 @@ componentDidMount() {
 }
 
   render() {
+    console.log('^^^^^^^This is books',this.state.books);
 
-let books = this.state.books.map(book => (
-  <p key={book._id}>{book.name} is a </p>
-))
+// let books = this.state.books.map(book => (
+//   <p key={book._id}>{book.name} is a </p>
+// ))
 
     /* TODO: render all the books in a Carousel */
 
-    let carouselItems = this.state.books.map((pic, index) => (
-      <Carousel.Item key={index}>
+    let carouselItems = this.state.books.map((value, index) => (
+      <Carousel.Item key={index} value={value}>
         <img
           className="d-block w-100"
           src={"https://www.fillmurray.com/640/360"}
-          alt={pic.alt}
+          alt={'Bill murray'}
         />
         <Carousel.Caption>
-          <h3 style={{ backgroundColor: 'teal', borderRadius: '5px', width: 'max-content', margin: 'auto', padding: '5px' }}>Photo by: {pic.artist}</h3>
+          <p>{value.title}</p>
+          <p>{value.description}</p>
+          <p>Available:{value.status}</p>
+          
         </Carousel.Caption>
       </Carousel.Item>
     ))
@@ -58,7 +62,7 @@ let books = this.state.books.map(book => (
           <Carousel>
             {carouselItems}
           </Carousel>
-          <p>Book Carousel coming soon</p>
+          
           </>
         ) : (
           <h3>No Books Found :(</h3>
