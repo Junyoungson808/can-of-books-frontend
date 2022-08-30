@@ -46,7 +46,7 @@ componentDidMount() {
         />
         <Carousel.Caption>
           <h3 style={{ backgroundColor: 'teal', borderRadius: '5px', width: 'max-content', margin: 'auto', padding: '5px' }}> </h3>
-          alt={'Bill murray'}
+          alt={'Bill Murray'}
           <p>{value.title}</p>
           <p>{value.description}</p>
           <p>Available:{value.status}</p>
