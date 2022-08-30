@@ -29,7 +29,6 @@ componentDidMount() {
 }
 
   render() {
-console.log(Check check check, this.state.book);
 // let books = this.state.books.map(book => (
 //   <p key={book._id}>{book.name} is a </p>
 // ))
