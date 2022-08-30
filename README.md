@@ -32,7 +32,8 @@ Actual time needed to complete: _8hours____
 
 Brandon Pitts - Collaborator
 
-https://trello.com/b/Ko1TmmHB/building-crud-apps-with-mongodb-lab11
-https://github.com/brandomoki/can-of-books-backend
-https://github.com/Junyoungson808/can-of-books-frontend
-https://radiant-arithmetic-aa4507.netlify.app/
+[trello](https://trello.com/b/Ko1TmmHB/building-crud-apps-with-mongodb-lab11)
+[frontend](https://github.com/Junyoungson808/can-of-books-frontend)
+[backend](https://github.com/brandomoki/can-of-books-backend)
+[netlify](https://radiant-arithmetic-aa4507.netlify.app/)
+[heroku](https://can-of-books-lab.herokuapp.com/)
