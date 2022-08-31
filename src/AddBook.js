@@ -5,16 +5,13 @@ import Button from "react-bootstrap/Button";
 
 class AddBook extends React.Component {
 
-
-  
-
-
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.handleBookCreate({
       title: event.target.formTitle.value,
       description: event.target.formDescription.value,
       status: event.target.formStatus.checked,
+      
     })
   }
 
@@ -37,7 +34,7 @@ return (
           </Form.Group>
 
           <Button variant="primary" type="submit">
-            Submit
+            Add Book
           </Button>
         </Form>
 

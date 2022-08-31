@@ -3,8 +3,8 @@ import AddBook from './AddBook';
 
 
 
+
 class BookFormModal extends React.Component {
-    
 
     render() {
 
@@ -12,7 +12,6 @@ class BookFormModal extends React.Component {
             <AddBook handleBookCreate={this.props.handleBookCreate} />
         )
     }
-
 }
 
 export default BookFormModal;
