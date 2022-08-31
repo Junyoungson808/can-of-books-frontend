@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
+import BookFormModal from "./BookFormModal";
 import { Carousel, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
-import AddBook from "./AddBook";
+
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -65,6 +66,24 @@ class BestBooks extends React.Component {
     }
   }
 
+  updateBooks = async(bookToUpdate) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}/books/${bookToUpdate._id}`;
+      let updatedBook = await axios.put(url, bookToUpdate);
+
+      let updatedBookArray = this.state.books.map(existingBook => {
+        return existingBook._id === bookToUpdate._id
+        ? updatedBook.data
+        : existingBook
+      });
+      this.setState({
+        books: updatedBookArray
+      });
+    } catch (error) {
+      console.log('error is books post: ', error.response);
+    }
+  }
+
   componentDidMount() {
     this.getBooks();
   }
@@ -108,9 +127,15 @@ class BestBooks extends React.Component {
         } 
         <h3>No Books Found</h3>
         
-        <AddBook handleBookCreate={this.handleBookCreate} />
+        <Button onclick={() => this.setState({showForm: true})}>Update Book</Button>
+        {
+          this.state.showForm && 
+          <BookFormModal 
+          book={this.book}
+          handleBookCreate={this.handleBookCreate}
 
-        
+          />
+        }
         {
           this.state.books.length > 0 &&
           <>
