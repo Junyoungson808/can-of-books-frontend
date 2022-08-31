@@ -4,7 +4,8 @@ import BookFormModal from "./BookFormModal";
 import { Carousel, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-
+import AddBook from "./AddBook";
+import UpdateBook from "./UpdateBook";
 
 
 class BestBooks extends React.Component {
@@ -60,7 +61,6 @@ class BestBooks extends React.Component {
       this.setState({
         books: filteredBooks
       })
-
     } catch (error) {
       console.log(error);
     }
@@ -89,44 +89,47 @@ class BestBooks extends React.Component {
   }
 
   render() {
-    console.log("^^^^^^^This is books", this.state.books);
+    console.log(this.state.books);
     let books = this.state.books.map(book => (
-
       <>
         <p key={book._id}>{book.title}</p>
-        {/* <button onClick={() => this.handleDelete(book)}>Remove from database?</button> */}
         <Button onClick={() => this.handleDelete(book)} variant="danger" >Remove from database?</Button>
       </>
     ))
-
-
     /* TODO: render all the books in a Carousel */
     let carouselItems = this.state.books.map((value, index) => (
-      <Carousel.Item key={index} value={value}>
+      <Carousel.Item key={index} value={value} >
         <img className="d-block w-100" src={"https://www.fillmurray.com/640/360"} alt={"Bill Murray"} />
         <Carousel.Caption>
           {/* <h3 style={{backgroundColor: "teal", borderRadius: "5px", width: "max-content", margin: "auto", padding: "5px",}}></h3> */}
           <h3>{value.title}</h3>
           <p>{value.description}</p>
-          <p>Available:{value.status}</p>
+          <p>Read:{value.status}</p>
+          <p>{value._id}</p>
         </Carousel.Caption>
       </Carousel.Item>
     ))
       return (
-
       <>
-
-        
         {
           this.state.books.length > 0 && 
           <>
             <Container>
-              <Carousel>{carouselItems}</Carousel>
+              <Carousel>
+                {carouselItems}
+                
+              
+              
+              </Carousel>
             </Container>
           </>  
         } 
         <h3>No Books Found</h3>
-        
+
+        <AddBook handleBookCreate={this.handleBookCreate} />
+        <UpdateBook updateBooks={this.updateBooks} books={this.state.books}/>
+
+
         <Button onclick={() => this.setState({showForm: true})}>Update Book</Button>
         {
           this.state.showForm && 
