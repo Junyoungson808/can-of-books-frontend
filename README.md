@@ -1,7 +1,25 @@
 # Can of Books - FrontEnd
 
 **Author**: Junyoung Son, Brandon Pitts
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.4 (increment the patch/fix version number if you make more commits past your first submission)
+
+### Logistical
+Mon-Fri 2:00pm - 8:00pm
+Forms of Contact: Slack, Remo, Zoom
+Breaks every hour as needed
+
+### Cooperative
+Make a list of each parson’s strengths.
+Brandon
+Jun
+How can you best utilize these strengths in the development of your application?
+In what areas do you each want to develop greater strength?
+Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
+
+### Conflict Resolution
+What will your team do if one person is pulling all the weight while the other person is not contributing?
+What will your team do if one person is taking over the project and not letting the other member contribute?
+How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
 
 ## Overview
 Can of Books is a full-stack CRUD app. This app allows users to track books they have read.
