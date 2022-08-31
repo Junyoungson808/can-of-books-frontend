@@ -4,21 +4,31 @@
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+Can of Books is a full-stack CRUD app. This app allows users to track books they have read.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+React
+Mongoose
+MongoDB
+Axios
+Express
+Node.js
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+08-29-2022 10:42pm - Application now has a fully-funtional express server, with a GET route for the location resource.
+08-30-2022 4:30pm - Application has Get, Post, Delete functionality
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+## Credit and Collaborations
+Brandon Pitts - Collaborator
 
+--------------------------------------
 ## Estimates
-Name of feature: __lab11___
+
+8/29/2022
+Name of feature: __lab11__
 
 Estimate of time needed to complete: _5hours__
 
@@ -28,9 +38,55 @@ Finish time: _10:42pm____
 
 Actual time needed to complete: _8hours____
 
-## Credit and Collaborations
+--------------------------------------
+8/30/2022
+Name of feature: __lab12__
 
-Brandon Pitts - Collaborator
+Estimate of time needed to complete: _5hours__
+
+Start time: __2:00pm___
+
+Finish time: _7:30pm____
+
+Actual time needed to complete: _5hours____
+
+--------------------------------------
+9/1/2022
+Name of feature: __lab13__
+
+Estimate of time needed to complete: ___
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: ___
+
+--------------------------------------
+9/2/2022
+Name of feature: __lab14__
+
+Estimate of time needed to complete: ___
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: ___
+
+--------------------------------------
+9/3/2022
+Name of feature: __lab15__
+
+Estimate of time needed to complete: ___
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: ___
+
+--------------------------------------
 
 [trello](https://trello.com/b/Ko1TmmHB/building-crud-apps-with-mongodb-lab11)
 [frontend](https://github.com/Junyoungson808/can-of-books-frontend)
