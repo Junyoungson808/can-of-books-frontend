@@ -2,14 +2,16 @@ import axios from "axios";
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import Button from 'react-bootstrap/Button';
+
+import AddBook from "./AddBook";
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       books: [],
+      showForm: false,
     }
   }
 
@@ -40,15 +42,7 @@ class BestBooks extends React.Component {
     }
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.handleBookCreate({
-      title: event.target.formTitle.value,
-      description: event.target.formDescription.value,
-      status: event.target.formStatus.checked,
-    })
-  }
-
+  
   handleDelete = async (bookToDelete) => {
     try {
       // make axios.delete request
@@ -77,6 +71,16 @@ class BestBooks extends React.Component {
 
   render() {
     console.log("^^^^^^^This is books", this.state.books);
+    let books = this.state.books.map(book => (
+
+      <>
+        <p key={book._id}>{book.title}</p>
+        {/* <button onClick={() => this.handleDelete(book)}>Remove from database?</button> */}
+        <Button onClick={() => this.handleDelete(book)} variant="danger" >Remove from database?</Button>
+      </>
+    ))
+
+
     /* TODO: render all the books in a Carousel */
     let carouselItems = this.state.books.map((value, index) => (
       <Carousel.Item key={index} value={value}>
@@ -90,8 +94,10 @@ class BestBooks extends React.Component {
       </Carousel.Item>
     ))
       return (
+
       <>
-        <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
+
+        
         {
           this.state.books.length > 0 && 
           <>
@@ -101,24 +107,18 @@ class BestBooks extends React.Component {
           </>  
         } 
         <h3>No Books Found</h3>
+        
+        <AddBook handleBookCreate={this.handleBookCreate} />
 
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group className="mb-3" controlId="formTitle">
-            <Form.Label>Title</Form.Label>
-            <Form.Control type="name" placeholder="Enter book title" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formDescription">
-            <Form.Label>Description</Form.Label>
-            <Form.Control type="name" placeholder="Enter book description" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formStatus">
-            <Form.Check type="checkbox" label="Check availability" />
-          </Form.Group>
+        
+        {
+          this.state.books.length > 0 &&
+          <>
+          {books}
+          </>
+        }
+        
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
       </>
     );
   }
