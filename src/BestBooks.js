@@ -4,7 +4,6 @@ import BookFormModal from "./BookFormModal";
 import { Carousel, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import AddBook from "./AddBook";
 import UpdateBook from "./UpdateBook";
 
 
@@ -126,14 +125,16 @@ class BestBooks extends React.Component {
         } 
         <h3>No Books Found</h3>
 
-        <AddBook handleBookCreate={this.handleBookCreate} />
+        
+
         <UpdateBook updateBooks={this.updateBooks} books={this.state.books}/>
 
 
-        <Button onclick={() => this.setState({showForm: true})}>Update Book</Button>
+        <Button onClick={() => this.setState({showForm: true})}>Add New Book</Button>
         {
           this.state.showForm && 
           <BookFormModal 
+          key={this.state.books}
           book={this.book}
           handleBookCreate={this.handleBookCreate}
 

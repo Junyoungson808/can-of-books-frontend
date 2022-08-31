@@ -13,10 +13,10 @@ class UpdateBook extends React.Component {
       title: e.target.title.book,
       description: e.target.description.book,
       status: e.target.status.checked,
-      _id: this.props.book._id,
-      __v: this.props.book.__v,
+      _id: e.target._id.book,
+      __v: e.target.__v,
     }
-    this.props.UpdateBook(bookToUpdate);
+    this.props.updateBook(bookToUpdate);
   }
 
   render() {
@@ -37,8 +37,8 @@ return (
           <Form.Group className="mb-3" controlId="status">
             <Form.Check type="checkbox" label="Check Read" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="">
-            <Form.Check type="checkbox" label="Check Read" />
+          <Form.Group className="mb-3" controlId="_id">
+            <Form.Control type="name" placeholder={this.props.book} />
           </Form.Group>
 
           <Button variant="primary" type="submit">
