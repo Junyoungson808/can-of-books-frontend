@@ -9,17 +9,23 @@ Forms of Contact: Slack, Remo, Zoom
 Breaks every hour as needed
 
 ### Cooperative
-Make a list of each parson’s strengths.
-Brandon
-Jun
+Make a list of each person’s strengths.
+Brandon - Technical, logical understanding of code,
+Jun - knows terminal vscode shortcuts, 
 How can you best utilize these strengths in the development of your application?
+Where each of us lack we will take turns in solving the solution. 
 In what areas do you each want to develop greater strength?
 Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
+When we meet up in Remo, we usually catch each other upto speed on the project and where we left off and parts we excelled on.
+After our daily rollup we read Trello and the tasks at hand and divide and conquer our tasks. When we dont know something we talk to each other and review.
 
 ### Conflict Resolution
 What will your team do if one person is pulling all the weight while the other person is not contributing?
+We will talk to each other about it, and work it out. If it isn't working then we will ask our TA/Teacher for some help.
 What will your team do if one person is taking over the project and not letting the other member contribute?
+They can take over it and finish it up and then teach the other person what they did or are doing.
 How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
+We talk about it communication is key on our team and we use liveshare to work on the same project at the same time to speed up the process.
 
 ## Overview
 Can of Books is a full-stack CRUD app. This app allows users to track books they have read.
