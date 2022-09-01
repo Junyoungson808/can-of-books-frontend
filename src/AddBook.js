@@ -5,12 +5,6 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 class AddBook extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-
-      }
-    }
 
   handleSubmit = (event) => {
     event.preventDefault();
