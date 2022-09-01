@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
-import BookFormModal from "./BookFormModal";
+// import BookFormModal from "./BookFormModal";
 import { Carousel, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import UpdateBook from "./UpdateBook";
+import AddBook from './AddBook';
 
 
 class BestBooks extends React.Component {
@@ -16,7 +17,7 @@ class BestBooks extends React.Component {
       showModal: false,
     }
   }
-
+  
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
   getBooks = async () => {
     try {
@@ -44,7 +45,6 @@ class BestBooks extends React.Component {
     }
   }
 
-  
   handleDelete = async (bookToDelete) => {
     try {
       // make axios.delete request
@@ -118,9 +118,6 @@ class BestBooks extends React.Component {
             <Container>
               <Carousel>
                 {carouselItems}
-                
-              
-              
               </Carousel>
             </Container>
           </>  
@@ -135,13 +132,13 @@ class BestBooks extends React.Component {
         {/* <UpdateBook updateBooks={this.updateBooks} books={this.state.books}/> */}
 
 
-        <Button onClick={() => this.setState({showForm: true})}>Add New Book</Button>
+        <Button onClick={() => this.setState({showForm: true})}>Add Modal</Button>
         {
           this.state.showForm && 
-          <BookFormModal 
-          
-          
+          <AddBook 
+          showForm={this.state.showForm}
           handleBookCreate={this.handleBookCreate}
+          close={() => this.setState({showForm: false})}
 
           />
         }

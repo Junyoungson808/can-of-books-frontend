@@ -1,17 +1,20 @@
-import React from 'react';
-import AddBook from './AddBook';
+// import React from 'react';
+// import AddBook from './AddBook';
 
 
 
 
-class BookFormModal extends React.Component {
 
-    render() {
+// class BookFormModal extends React.Component {
 
-        return (
-            <AddBook handleBookCreate={this.props.handleBookCreate} />
-        )
-    }
-}
+//     render() {
 
-export default BookFormModal;
+//         return (
+
+//             <AddBook handleBookCreate={this.props.handleBookCreate} showForm={this.props.showForm} />
+            
+//         )
+//     }
+// }
+
+// export default BookFormModal;

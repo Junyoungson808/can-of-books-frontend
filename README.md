@@ -86,13 +86,13 @@ Actual time needed to complete: _5hours____
 9/1/2022
 Name of feature: **lab13**
 
-Estimate of time needed to complete: ___
+Estimate of time needed to complete: _5hours__
 
-Start time: _____
+Start time: _2:00pm_
 
-Finish time: _____
+Finish time: _9:30pm_
 
-Actual time needed to complete: ___
+Actual time needed to complete: _7hours__
 
 --------------------------------------
 9/2/2022
