@@ -1,11 +1,10 @@
 import axios from "axios";
 import React from "react";
-// import BookFormModal from "./BookFormModal";
 import { Carousel, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import UpdateBook from "./UpdateBook";
-import AddBook from './AddBook';
+import BookFormModal from "./BookFormModal";
 
 
 class BestBooks extends React.Component {
@@ -98,6 +97,7 @@ class BestBooks extends React.Component {
     ))
     /* TODO: render all the books in a Carousel */
     let carouselItems = this.state.books.map((value, index) => (
+      
       <Carousel.Item key={index} value={value} >
         <img className="d-block w-100" src={"https://www.fillmurray.com/640/360"} alt={"Bill Murray"} />
         <Carousel.Caption>
@@ -109,6 +109,7 @@ class BestBooks extends React.Component {
           <Button onClick={() => this.setState({showModal: true, currentBook: value})}>Update</Button>
         </Carousel.Caption>
       </Carousel.Item>
+
     ))
       return (
       <>
@@ -131,11 +132,10 @@ class BestBooks extends React.Component {
 
         {/* <UpdateBook updateBooks={this.updateBooks} books={this.state.books}/> */}
 
-
         <Button onClick={() => this.setState({showForm: true})}>Add Modal</Button>
         {
           this.state.showForm && 
-          <AddBook 
+          <BookFormModal 
           showForm={this.state.showForm}
           handleBookCreate={this.handleBookCreate}
           close={() => this.setState({showForm: false})}
