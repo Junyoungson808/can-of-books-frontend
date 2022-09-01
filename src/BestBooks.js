@@ -13,6 +13,7 @@ class BestBooks extends React.Component {
     this.state = {
       books: [],
       showForm: false,
+      showModal: false,
     }
   }
 
@@ -105,6 +106,7 @@ class BestBooks extends React.Component {
           <p>{value.description}</p>
           <p>Read:{value.status}</p>
           <p>{value._id}</p>
+          <Button onClick={() => this.setState({showModal: true, currentBook: value})}>Update</Button>
         </Carousel.Caption>
       </Carousel.Item>
     ))
@@ -125,17 +127,20 @@ class BestBooks extends React.Component {
         } 
         <h3>No Books Found</h3>
 
-        
+        {
+          this.state.showModal &&
+          <UpdateBook updateBooks={this.updateBooks} books={this.state.currentBook}/>
+        }
 
-        <UpdateBook updateBooks={this.updateBooks} books={this.state.books}/>
+        {/* <UpdateBook updateBooks={this.updateBooks} books={this.state.books}/> */}
 
 
         <Button onClick={() => this.setState({showForm: true})}>Add New Book</Button>
         {
           this.state.showForm && 
           <BookFormModal 
-          key={this.state.books}
-          book={this.book}
+          
+          
           handleBookCreate={this.handleBookCreate}
 
           />
