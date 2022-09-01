@@ -8,15 +8,16 @@ class UpdateBook extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log('111111111111111111111111111',this.props);
 
     let bookToUpdate = {
-      title: e.target.title.book,
-      description: e.target.description.book,
+      title: e.target.title.value,
+      description: e.target.description.value,
       status: e.target.status.checked,
-      _id: this.props.book._id,
-      __v: this.props.book.__v,
+      _id: this.props.books._id,
+      __v: this.props.books.__v
     }
-    this.props.UpdateBook(bookToUpdate);
+    this.props.updateBooks(bookToUpdate);
   }
 
   render() {
@@ -28,7 +29,7 @@ return (
         <Form onSubmit={this.handleSubmit}>
           <Form.Group className="mb-3" controlId="title">
             <Form.Label>Title</Form.Label>
-            <Form.Control type="name" placeholder="Title" />
+            <Form.Control type="name" placeholder={this.props.books.title} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="description">
             <Form.Label>Description</Form.Label>
@@ -37,8 +38,8 @@ return (
           <Form.Group className="mb-3" controlId="status">
             <Form.Check type="checkbox" label="Check Read" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="">
-            <Form.Check type="checkbox" label="Check Read" />
+          <Form.Group className="mb-3" controlId="_id">
+            <Form.Control type="name" placeholder={this.props.books._id} />
           </Form.Group>
 
           <Button variant="primary" type="submit">
